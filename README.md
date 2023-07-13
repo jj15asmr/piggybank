@@ -10,7 +10,7 @@ While their prices and overall experience is good, there didn't seem to be an ea
 
 **Introducing <span style="color: #f49090;">Piggybank</span>** 🐖 ~ a simple-to-use web app that allows you to easily calculate the total registration and renewal costs of your Porkbun domains.
 
-All you need to do is copy-and-paste your [simple list](https://porkbun.com/account/domainList) of domains from Porkbun (or if you're just brainstorming, type in any domain offered by Porkbun) into the box on [the homepage](https://piggybank.jj15asmr.com) and hit "Calculate".
+All you need to do is copy-and-paste your [simple list](https://porkbun.com/account/domainList) of domains from Porkbun (or if you're just brainstorming, type in any domain offered by Porkbun on a new line) into the box on [the homepage](https://piggybank.jj15asmr.com) and hit "Calculate".
 
 Your total registration and renewal costs will then be calculated and displayed for you to marvel at. 🤩
 
@@ -22,13 +22,13 @@ Porkbun allows you to view a plain text or "simple" list of your currently regis
 
 Piggybank is set up to make an API request twice per week (Tuesdays and Fridays) for this pricing data which is then stored in the database.
 
-When you copy-and-paste your list of domains into the box, it is then parsed to extract the [TLD](https://www.cloudflare.com/learning/dns/top-level-domain/) (top-level domain or it's "extension") from each indvidual domain name which is then finally used to calculate the total registration and renewal costs using the stored pricing data.
+When you copy-and-paste your list of domains into the box, it is then parsed to extract the [TLD](https://www.cloudflare.com/learning/dns/top-level-domain/) (top-level domain or its "extension") from each individual domain name which is then finally used to calculate the total registration and renewal costs using the stored pricing data.
 
-*Please note that because registration and renewal prices for domains can and will fluculate over time due to registry changes or special offers, the calculated costs should be seen more as an estimation or "ballpark" figure to help you budget your domains.*
+*Please note that because registration and renewal prices for domains can and will fluctuate over time due to registry changes or special offers, the calculated costs should be seen more as an estimation or "ballpark" figure to help you budget your domains.*
 
 ## Installation
 
-You can setup and run Piggybank yourself by following the below instructions:
+You can set up and run Piggybank yourself by following the below instructions:
 
 1. Download (and extract) or clone Piggybank's repository to your local machine or server.
 
@@ -62,14 +62,14 @@ You can setup and run Piggybank yourself by following the below instructions:
         * * * * * cd /path/to/piggybank && php artisan schedule:run >> /dev/null 2>&1
         ```
 
-        The automatic fetch is powered by Laravel's built-in task scheduler and so it might be helpful to view [it's documentation](https://laravel.com/docs/10.x/scheduling) if you'd like to modify things further.
+        The automatic fetch is powered by Laravel's built-in task scheduler and so it might be helpful to view [its documentation](https://laravel.com/docs/10.x/scheduling) if you'd like to modify things further.
 
-6. Lastly, ensure that the ``APP_URL`` and ``ASSET_URL`` keys in the ``.env`` file are correct for your case and then run the below command to host Piggybank locally on your machine:
+6. Lastly, ensure that the ``APP_URL`` and ``ASSET_URL`` keys in the ``.env`` file are correct for your case, and then run the below command to host Piggybank locally on your machine:
     ```bash
     php artisan serve
     ```
 
-    Go to the URL given in your browser and you should be all set! Enter in some domains to calculate the costs for and have fun!
+    Go to the URL given in your browser and you should be all set! Enter some domains to calculate the costs and have fun!
 
 ### Running Tests
 
