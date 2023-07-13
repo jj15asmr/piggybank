@@ -9,8 +9,8 @@
 
     {{-- Meta Tags --}}
     <meta name="title" content="Piggybank &bull; Porkbun Domain Costs Calculator">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Piggybank is a simple-to-use web app that allows you to easily calculate the total registration and renewal costs of your Porkbun domains.">
+    <meta name="keywords" content="piggybank, porkbun domain prices, porkbun registration costs, porkbun renewal costs">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
