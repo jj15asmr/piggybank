@@ -1,0 +1,29 @@
+{
+    "status":"SUCCESS",
+    "pricing":{
+        "com":{
+            "registration":"9.73",
+            "renewal":"9.73",
+            "transfer":"9.73",
+            "coupons":[
+                
+            ]
+        },
+        "net":{
+            "registration":"11.48",
+            "renewal":"11.48",
+            "transfer":"11.48",
+            "coupons":[
+                
+            ]
+        },
+        "org":{
+            "registration":"10.72",
+            "renewal":"10.72",
+            "transfer":"10.72",
+            "coupons":[
+                
+            ]
+        }
+    }
+}
