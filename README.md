@@ -1,4 +1,4 @@
-# 🐷💰 <span style="color: #f49090;">Piggybank</span> &bull; Porkbun Domain Costs Calculator
+# 🐷💰 Piggybank &bull; Porkbun Domain Costs Calculator
 
 ![](public/assets/img/og-image.png)
 
@@ -8,7 +8,7 @@ I used to have a domain name addiction (and still kind of do... but, hey, baby s
 
 While their prices and overall experience is good, there didn't seem to be an easy way to see how much your total renewal costs would be for the year, which I personally really wanted so I'd be able to budget accordingly.
 
-**Introducing <span style="color: #f49090;">Piggybank</span>** 🐖 ~ a simple-to-use web app that allows you to easily calculate the total registration and renewal costs of your Porkbun domains.
+**Introducing Piggybank** 🐖 ~ a simple-to-use web app that allows you to easily calculate the total registration and renewal costs of your Porkbun domains.
 
 All you need to do is copy-and-paste your [simple list](https://porkbun.com/account/domainList) of domains from Porkbun (or if you're just brainstorming, type in any domain offered by Porkbun on a new line) into the box on [the homepage](https://piggybank.jj15asmr.com) and hit "Calculate".
 
