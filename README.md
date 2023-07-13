@@ -10,7 +10,7 @@ While their prices and overall experience is good, there didn't seem to be an ea
 
 **Introducing <span style="color: #f49090;">Piggybank</span>** 🐖 ~ a simple-to-use web app that allows you to easily calculate the total registration and renewal costs of your Porkbun domains.
 
-All you need to do is copy-and-paste your [simple list](https://porkbun.com/account/domainList) of domains from Porkbun into the box on [the homepage](https://piggybank.jj15asmr.com) and hit "Calculate".
+All you need to do is copy-and-paste your [simple list](https://porkbun.com/account/domainList) of domains from Porkbun (or if you're just brainstorming, type in any domain offered by Porkbun) into the box on [the homepage](https://piggybank.jj15asmr.com) and hit "Calculate".
 
 Your total registration and renewal costs will then be calculated and displayed for you to marvel at. 🤩
 
