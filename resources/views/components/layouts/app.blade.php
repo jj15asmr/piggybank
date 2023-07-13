@@ -17,6 +17,21 @@
     <meta name="author" content="Jacob Prunkl">
     <meta name="theme-color" content="#f49090">
 
+    {{-- Open Graph Tags - Facebook --}}
+    <meta property="og:url" content="{{ config('app.url') }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Piggybank">
+    <meta property="og:description" content="Piggybank is a simple-to-use web app that allows you to easily calculate the total registration and renewal costs of your Porkbun domains.">
+    <meta property="og:image" content="{{ asset('img/og-image.png') }}">
+
+    {{-- Open Graph Tags - Twitter --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="{{ str(config('app.url'))->remove(['https://', 'http://', '/']) }}">
+    <meta property="twitter:url" content="{{ config('app.url') }}">
+    <meta name="twitter:title" content="Piggybank">
+    <meta name="twitter:description" content="Piggybank is a simple-to-use web app that allows you to easily calculate the total registration and renewal costs of your Porkbun domains.">
+    <meta name="twitter:image" content="{{ asset('img/og-image.png') }}">
+
     {{-- Favicons --}}
     <link rel="icon" type="image/png" href="{{ asset('img/favicons/32x32.png') }}" sizes="32x32" />
     <link rel="icon" type="image/png" href="{{ asset('img/favicons/16x16.png') }}" sizes="16x16" />
