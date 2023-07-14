@@ -57,16 +57,14 @@ class DomainNameService
 
     /**
      * Extract the TLD from a domain name.
+     * 
+     * @throws  InvalidDomainException  If the domain is invalid.
      */
     public function domainToTld(string $domain): string
     {
         $domain = trim($domain);
 
-        try {
-            $this->validateDomain($domain);
-        } catch (InvalidDomainException $ex) {
-            throw $ex;
-        }
+        $this->validateDomain($domain);
 
         $domain_parts = explode('.', $domain);
         unset($domain_parts[0]); // Remove the second-level name (ex. "tinglytube") in case of multi-level TLDs (ex. ".co.uk")
