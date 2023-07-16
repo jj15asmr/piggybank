@@ -22,9 +22,11 @@ Porkbun allows you to view a plain text or "simple" list of your currently regis
 
 Piggybank is set up to make an API request twice per week (Tuesdays and Fridays) for this pricing data which is then stored in the database.
 
-When you copy-and-paste your list of domains into the box, it is then parsed to extract the [TLD](https://www.cloudflare.com/learning/dns/top-level-domain/) (top-level domain or its "extension") from each individual domain name which is then finally used to calculate the total registration and renewal costs using the stored pricing data.
+When you copy-and-paste or enter a list of domains into the box, it is then parsed to extract the [TLD](https://www.cloudflare.com/learning/dns/top-level-domain/) (top-level domain or its "extension") from each individual domain name which is then finally used to calculate the total registration and renewal costs using the stored pricing data.
 
-*Please note that because registration and renewal prices for domains can and will fluctuate over time due to registry changes or special offers, the calculated costs should be seen more as an estimation or "ballpark" figure to help you budget your domains.*
+> **☝️ Please note that there are a couple of small caveats with Piggybank:**
+> * Domain prices can and will fluctuate over time due to registry (the company that owns the TLD) changes or special offers by Porkbun, the calculated costs should be seen more as an estimation or "ballpark" figure to help you budget your domains.
+> * [Some domain names are considered "premium"](https://kb.porkbun.com/article/41-what-are-premium-domains) by their registry in which Porkbun is charged a higher-than-normal cost to register and/or renew it, which is then passed onto you. Pricing data from Porkbun is based on TLD and thus Piggybank has no knowledge of which names may be considered premium.
 
 ## Installation
 
