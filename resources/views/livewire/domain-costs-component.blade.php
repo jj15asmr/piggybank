@@ -12,7 +12,7 @@
                     </div>
                 @enderror
 
-                <textarea wire:model.defer="domains" class="form-control" rows="5"></textarea>
+                <textarea wire:model="domains" class="form-control" rows="5"></textarea>
 
                 <button wire:click="calculate" wire:loading.attr="disabled" class="btn btn-secondary d-block mx-auto mt-4" type="button">
                     <span wire:loading.class="d-none"><i class="fa-solid fa-coins me-1"></i> Calculate</span>
