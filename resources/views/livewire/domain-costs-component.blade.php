@@ -37,13 +37,13 @@
                 {{-- Registration Costs --}}
                 <div class="col-md-3 align-self-center mb-4 mb-md-0">
                     <h4 class="text-primary fw-bold mb-3">Registration <sup class="text-muted" title="The price you pay to register the domain for the first time"><i class="fa-solid fa-circle-question fa-xs"></i></sup></h4>
-                    <h3 class="fw-light mb-0">{{ $total_costs['total_registration']->format() }}</h3>
+                    <h3 class="fw-light mb-0">{{ $total_costs['total_registration'] }}</h3>
                 </div>
 
                 {{-- Renewal Costs --}}
                 <div class="col-md-3 align-self-center">
                     <h4 class="text-primary fw-bold mb-3">Renewal <sup class="text-muted" title="The price you pay to keep your domain active after the initial registration period"><i class="fa-solid fa-circle-question fa-xs"></i></sup></h4>
-                    <h3 class="fw-light mb-0">{{ $total_costs['total_renewal']->format() }}</h3>
+                    <h3 class="fw-light mb-0">{{ $total_costs['total_renewal'] }}</h3>
                 </div>
             </div>
             <small class="text-muted text-center d-block mt-3">Prices last fetched from the Porkbun API on {{ $last_fetched_date }}</small>
@@ -59,6 +59,6 @@
         </div>
 
         {{-- Domain Pricing Modal --}}
-        @includeWhen(!is_null($total_costs), 'partials.domain-pricing-modal')
+        @include('partials.domain-pricing-modal')
     @endif
 </div>
