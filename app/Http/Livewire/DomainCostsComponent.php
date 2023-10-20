@@ -41,7 +41,7 @@ class DomainCostsComponent extends Component
 
     public function resetCalculation(bool $hard = false): void
     {
-        (!$hard) ? $this->reset('total_costs') : $this->reset(['domains', 'total_costs']);
+        (!$hard) ? $this->total_costs = null : $this->domains = $this->total_costs = null;
         $this->dispatch('caculationReset');
     }
 
