@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Actions\CalculateTotalDomainCostsAction;
-use App\Exceptions\{InvalidDomainException, DomainsArrayEmptyException};
+use App\Exceptions\InvalidDomainException;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 
@@ -32,7 +32,6 @@ class DomainCostsComponent extends Component
 
         try {
             $this->total_costs = $calculate($this->domains);
-            $this->emit('totalCostsCalculated');
 
         } catch (InvalidDomainException $ex) {
             $this->addError('domains', "\"{$ex->domain}\" doesn't seem to be a valid domain, please check :)");
@@ -41,8 +40,7 @@ class DomainCostsComponent extends Component
 
     public function resetCalculation(bool $hard = false): void
     {
-        (!$hard) ? $this->reset('total_costs') : $this->reset(['domains', 'total_costs']);
-        $this->emit('caculationReset');
+        !$hard ? $this->total_costs = null : $this->domains = $this->total_costs = null;
     }
 
     public function render(): mixed

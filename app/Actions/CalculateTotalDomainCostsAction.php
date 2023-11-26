@@ -44,13 +44,13 @@ class CalculateTotalDomainCostsAction
             );
 
             // Add the domain's individual registration & renewal price
-            $total_costs['domains'][$domain]['registration'] = $domain_price->registration_price ?? Money::USD(0);
-            $total_costs['domains'][$domain]['renewal'] = $domain_price->renewal_price ?? Money::USD(0);
+            $total_costs['domains'][$domain]['registration'] = ($domain_price->registration_price ?? Money::USD(0))->format();
+            $total_costs['domains'][$domain]['renewal'] = ($domain_price->renewal_price ?? Money::USD(0))->format();
         }
 
         $total_costs = Arr::prepend($total_costs, count($total_costs['domains']), 'total_domains');
-        $total_costs = Arr::prepend($total_costs, $total_renewal_cost, 'total_renewal');
-        $total_costs = Arr::prepend($total_costs, $total_registration_cost, 'total_registration');
+        $total_costs = Arr::prepend($total_costs, $total_renewal_cost->format(), 'total_renewal');
+        $total_costs = Arr::prepend($total_costs, $total_registration_cost->format(), 'total_registration');
 
         return $total_costs;
     }

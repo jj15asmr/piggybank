@@ -20,8 +20,8 @@
                             @foreach ($total_costs['domains'] as $domain => $pricing)
                                 <tr wire:key="domain-pricing-{{ Str::slug($domain) }}-{{ Str::random(10) }}">
                                     <td scope="row" style="width: 40%;">{{ $domain }}</td>
-                                    <td style="width: 25%;">{{ $pricing['registration']->format() }}</td>
-                                    <td style="width: 25%;">{{ $pricing['renewal']->format() }}</td>
+                                    <td style="width: 25%;">{{ $pricing['registration'] }}</td>
+                                    <td style="width: 25%;">{{ $pricing['renewal'] }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

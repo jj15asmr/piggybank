@@ -54,8 +54,6 @@ class DomainCostsComponentTest extends TestCase
             ->set('domains', $this->domains_list)
             ->call('calculate')
 
-            ->assertEmitted('totalCostsCalculated')
-
             ->assertSeeHtml("Alrighty, here's your calculated costs!")
             ->assertSeeInOrder([
                 'Total Domains',
@@ -113,8 +111,6 @@ class DomainCostsComponentTest extends TestCase
             ->call('calculate')
             ->call('resetCalculation')
 
-            ->assertEmitted('caculationReset')
-
             ->assertSet('domains', $this->domains_list)
             ->assertSet('total_costs', null)
             ->assertSee('Calculate');
@@ -124,8 +120,6 @@ class DomainCostsComponentTest extends TestCase
             ->set('domains', $this->domains_list)
             ->call('calculate')
             ->call('resetCalculation', true)
-
-            ->assertEmitted('caculationReset')
 
             ->assertSet('domains', null)
             ->assertSet('total_costs', null)
