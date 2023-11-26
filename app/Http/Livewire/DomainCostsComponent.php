@@ -32,7 +32,6 @@ class DomainCostsComponent extends Component
 
         try {
             $this->total_costs = $calculate($this->domains);
-            $this->dispatch('totalCostsCalculated');
 
         } catch (InvalidDomainException $ex) {
             $this->addError('domains', "\"{$ex->domain}\" doesn't seem to be a valid domain, please check :)");
@@ -41,8 +40,7 @@ class DomainCostsComponent extends Component
 
     public function resetCalculation(bool $hard = false): void
     {
-        (!$hard) ? $this->total_costs = null : $this->domains = $this->total_costs = null;
-        $this->dispatch('caculationReset');
+        !$hard ? $this->total_costs = null : $this->domains = $this->total_costs = null;
     }
 
     public function render(): mixed

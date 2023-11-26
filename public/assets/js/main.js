@@ -7,27 +7,41 @@ logo_link.addEventListener('click', event => {
     logo.classList.add('animate__animated', 'animate__bounce', 'animate__fast');
     logo_sound.play();
 
-    // Once the animation ends, remove it's classes so that it can be re-animated again
+    // Once the animation ends, remove it's classes so that it can be re-played.
     logo.addEventListener('animationend', () => {
         logo.classList.remove('animate__animated', 'animate__bounce');
     });
 });
 
-Livewire.on('totalCostsCalculated', () => {
-    const calculate = document.getElementById('calculate');
-    const calculation = document.getElementById('calculation');
+// Livewire v3 seems to dispatch component events before the DOM has been fully
+// morphed/updated, causing errors. To prevent this, we'll hook into Livewire's
+// morphing system to detect when the elements we want to manipulate have been
+// added. Not the prettiest solution, but it works.
+document.addEventListener('livewire:initialized', () => {
+    Livewire.hook('morph.added', ({el}) => {
+        const id = el.id;
 
-    calculate.addEventListener('animationend', () => {
-        // Totally remove it from the DOM as changing it's display seems to cause some issues
-        // when we want to "reset" the calculation and then fade it back in (due to Livewire's DOM diffing)
-        calculate.remove();
+        switch (true) {
+            case id === 'calculation':
+                const calculate = document.getElementById('calculate');
 
-        calculation.style.display = 'block';
-        calculation.classList.add('animate__animated', 'animate__fadeIn');
+                calculate.addEventListener('animationend', () => {
+                    calculate.remove();
+
+                    el.style.display = 'block';
+                    el.classList.add('animate__animated', 'animate__fadeIn');
+                });
+
+                break;
+
+            case id === 'calculate':
+                el.classList.add(
+                    'animate__animated',
+                    'animate__fadeIn',
+                    'animate__slow',
+                );
+
+                break;
+        }
     });
-});
-
-Livewire.on('caculationReset', () => {
-    const calculate = document.getElementById('calculate');
-    calculate.classList.add('animate__animated', 'animate__fadeIn', 'animate__slow');
 });
