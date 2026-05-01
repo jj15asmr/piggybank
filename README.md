@@ -1,5 +1,8 @@
 # 🐷💰 Piggybank &bull; Porkbun Domain Costs Calculator
 
+> [!NOTE]
+> Piggybank has been archived as I lack the necessary time (and motivation) to keep the code up-to-date and secure for public use. If you were someone who found it useful, you're more than welcome to try running a local version or even forking the project entirely.
+
 ![](public/assets/img/og-image.png)
 
 [<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=d00000">](https://github.com/SamKirkland/FTP-Deploy-Action)
